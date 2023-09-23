@@ -17,7 +17,7 @@ while True:
     print(f'We got the connection from address {addr}')
 
     message = ('Thank you for connecting')
-    c.send(message.encode()) # need to convert the string into bytes as you can only send btyes not strings
+    c.send(message.encode('utf-8')) # need to convert the string into bytes as you can only send btyes not strings
     
     # Telnet does not exist on mac so using netcat as an alternative
     # nc localhost 56789
